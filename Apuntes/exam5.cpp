@@ -6,9 +6,9 @@ using namespace std;
 int** inicio(int filas, int columns) {
     int** matrix = new int*[filas];   // array de punteros
     for (int i=0;i<filas; i++) {
-        matriz[i] = new int [columns];
+        matrix[i] = new int [columns];
         for (int j=0;j<filas; j++) {
-            matriz[i][j] = rand()%100;  // numeros aleatorios de 0 al 100
+            matrix[i][j] = rand()%100;  // numeros aleatorios de 0 al 100
         }
     }
     return matrix;
@@ -32,7 +32,7 @@ int main() {
     int filas=3, columns=5;
     int** matrix = nullptr;  // genera una matrix de contenido null
     srand(time(nullptr));
-    int* inice = inicio(filas, columns); // crea los punteros en el array matrix
+    int** inice = inicio(filas, columns); // crea los punteros en el array matrix
     imprimir(matrix, filas, columns);
     vaciar(matrix, filas, columns);
 
