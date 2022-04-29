@@ -1,6 +1,0 @@
-#!/bin/bash
-cd /mnt/c/Users/ASUS/Desktop/ApCodes/C++/CodesPractice
-source ~/miniconda3/etc/profile.d/conda.sh
-conda activate cpp
-export BROWSER="/mnt/c/Program Files/Google/Chrome/Application/chrome.exe"
-jupyter notebook
