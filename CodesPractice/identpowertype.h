@@ -1,6 +1,5 @@
-#pragma once
-#ifndef IDENTPOWERTYPE
-#define IDENTPOWERTYPE
+#ifndef _IDENTPOWERTYPE
+#define _IDENTPOWERTYPE
 
 using namespace std;
 
