@@ -6,11 +6,11 @@
 #include <vector>
 using namespace std;
 
-void printt(vector<int> &vector) {
+void printt_vet(vector<int> &vector) {
     cout << "{";
     for (int i=0; i<vector.size()-1;i++)
         cout << vector.at(i) << ", ";
-    cout << vector.at(vector.size()-1) << endl;
+    cout << vector.at(vector.size()-1) <<"}" << endl;
 }
 
 #pragma endregion

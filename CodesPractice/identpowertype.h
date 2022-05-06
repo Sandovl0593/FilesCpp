@@ -1,42 +1,35 @@
-#ifndef _IDENTPOWERTYPE
-#define _IDENTPOWERTYPE
+#ifndef _FUNCIONES
+#define _FUNCIONES
+#include <iostream>
+// #include <stdlib.h>
+// #include <time.h>
+
+const int MIN_TAREAS =5; // minimo de tareas por dia
+const int MAX_TAREAS =20; // maximo de tareas por dia
+const int MAX_TRABAJADORES =10; // maximo de trabajadores
 
 using namespace std;
 
-int getPoder(string let) {
-    string lets[] = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"};
-    const int valuesLet[] = {2,3,4,5,6,7,8,9,10,11,12,13,14};
-
-    int valor;
-    for (int i=0; i<13;i++) {
-        if (lets[i] == let)
-            valor = valuesLet[i];
-    }
-    return valor;
+int obtenerTrabajadores() {
+    int cant;
+    do {cout << "Cantidad de trabajadores: ";    cin >> cant;
+    } while (cant > MAX_TRABAJADORES || cant < 1);
+    return cant;
 }
 
-int getvalor(char type) {
-    int valor;
-    switch (type) {
-        case 'S':   valor = 4;    break;
-        case 'H':   valor = 3;    break;
-        case 'D':   valor = 2;    break;
-        case 'C':   valor = 1;    break;
-        default: break;
-    }
-    return valor;
+int generarAvance() {
+    int random;
+    // srand(time(NULL));
+    do { random = rand()% MAX_TAREAS;
+    } while (random < MIN_TAREAS);
+    return random;
 }
 
-string* SepararTypes(string carta) {
-    string* lisChar = new string[2];
-    if (size(carta) == 3) {
-        lisChar[0] = carta.substr(0, 2);
-        lisChar[1] = carta.substr(2, 1);
-    } else {
-        lisChar[0] = carta.substr(0, 1);
-        lisChar[1] = carta.substr(1, 1); 
-    }
-    return lisChar;
+void graficarAvance(int tareas) {
+    int porcentaje = (tareas*100/MAX_TAREAS);
+    for (int i=0; i<tareas; i++) {
+            cout << '|';
+    } cout << tareas << ':' << porcentaje << "%" << endl;
 }
 
-# endif // FILE: ../_IDENTPOWERTYPE.H
+# endif // FILE ../_FUNCIONES.H
