@@ -8,6 +8,7 @@ double* f1(double x) { // parametro variable
 
 void f2 (double* arg) { // parametro puntero
     *arg = 76.24324;
+    
     double* p = f1(*arg); // agrega un nuevo espacio
     cout << "Valor sub p: " << *p << endl;
     delete p; // elimina ese espacio

@@ -48,14 +48,11 @@ int main() {
     Aprobado* al2 = new Aprobado("Maria", 19, 10);
     al2 -> print();
 
-    Alumno* al3 = new Alumno("Pablo", 20);
-    cout << "Con " << al3 -> getEdad() << " anios" << endl;
-
     auto esp = new Especial("Carola", 23, "Astrofisica");
     cout << "Con " << esp -> getEdad() << " anios" << endl;
     cout << esp -> getCarrera() << endl;
 
-    vector<Alumno*> alumnos = {al1, al2, al3, esp};
+    vector<Alumno*> alumnos = {al1, al2, esp};
     cout << "Lista de inscritos:" << endl;
     for (auto alum: alumnos) {
         cout << "-- " << alum -> getName() << "\t" << alum -> getEdad() << " anios" << endl;
@@ -64,6 +61,5 @@ int main() {
     cout << endl;
     delete al1; // aqui se borra la superclase
     delete al2; // aqui borra la subclase y luego la superclase
-    delete al3;
     delete esp;
 }
